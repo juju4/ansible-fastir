@@ -1,0 +1,11 @@
+---
+
+- include: windows-init.yml
+
+- include: fastir.yml
+  when: fastir is defined and fastir
+
+- name: Recover files on orchestrator
+  fetch: "src={{ fastir_output }} dest=tmp/"
+  when: do_fetch is defined and do_fetch
+

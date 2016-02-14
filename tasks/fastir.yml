@@ -1,0 +1,39 @@
+---
+## http://www.sekoia.fr/blog/fastir-collector-on-advanced-threats/
+
+## precompiled binaries in build directory
+#- raw: "./fastresponder.py --packages all --ouput_dir {{ dst_path_win }}\\fastresponder"
+
+- name: check if FastIR executable present
+  win_stat: "path={{ bin_path_win }}\\Fastir_Collector-master\\build\\FastIR_x64.exe"
+  register: fastirexe
+- debug: var="{{ bin_path_win }}\\Fastir_Collector-master\\build\\FastIR_x64.exe"
+- debug: var="fastirexe"
+## FIXME! download happens even if already present
+- name: FastIR download
+  win_get_url: url=https://github.com/SekoiaLab/Fastir_Collector/archive/master.zip
+    dest="{{ bin_path_win }}\\fastir-master.zip"
+  when: not fastirexe.stat.exists and (do_download is defined and do_download)
+- name: FastIR unzip
+  win_unzip:
+      src: "{{ bin_path_win }}\\fastir-master.zip"
+      dest: "{{ bin_path_win }}"
+  when: not fastirexe.stat.exists and (do_download is defined and do_download)
+
+- debug: var="{{ dst_path_win }}\\{{ prefix }}-fastir"
+- name: check if existing output report
+  win_stat: path="{{ dst_path_win }}\\{{ prefix }}-fastir"
+  register: fastirout
+
+- set_fact:
+    fastir_output: "{{ dst_path_win }}\\{{ prefix }}-fastir"
+
+- name: Do FastIR check (64bits)
+  raw: "{{ bin_path_win }}\\Fastir_Collector-master\\build\\FastIR_x64.exe {{ fastir_args }}"
+  when: not fastirout.stat.exists and ansible_architecture == '64 bits'
+- name: Do FastIR check (32bits)
+  raw: "{{ bin_path_win }}\\Fastir_Collector-master\\build\\FastIR_x86.exe {{ fastir_args }}"
+  when: not fastirout.stat.exists and ansible_architecture == '32 bits'
+
+## BUG/FIXME! output files Oko
+

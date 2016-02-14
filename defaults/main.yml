@@ -1,0 +1,25 @@
+---
+
+## note: colon in prefix creates issues (ex: LiME compile)
+#prefix: "{{ ansible_fqdn }}-{{ ansible_date_time.iso8601 }}"
+#prefix: "{{ ansible_fqdn }}-{{ ansible_date_time.epoch }}"
+prefix: "{{ ansible_fqdn }}"
+## NOK: has '/' in date
+#prefix: "{{ ansible_fqdn }}-{{ ansible_date_time.date }}"
+#prefix: "{{ ansible_fqdn }}-{{ ansible_date_time.date }}_{{ ansible_date_time.hour }}{{ ansible_date_time.minute }}{{ ansible_date_time.second }}"
+
+do_download: true
+
+## recover files on orchestrator?
+do_fetch: true
+
+## can execute binaries from local network through smb or a local disk (but not really scaling here).
+bin_path_win: "c:\\temp\\ir-bin"
+## fastir is creating a timestamp directory inside output_dir w csv
+dst_path_win: "c:\\temp"
+
+fastir: true
+fastir_args: "--packages all --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
+#fastir_args: "--packages all --profile {{ bin_path_win }}\\Fastir_Collector-master\\FastIR.conf.sample --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
+#fastir_args: "--packages all --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir --dump ram"
+

@@ -1,0 +1,11 @@
+---
+
+- hosts: test-kitchen
+  vars:
+    - prefix: fqdn
+    - dst_mount: "/tmp/cases"
+    - dst_path: "{{ dst_mount }}/{{ prefix }}-incidentreport"
+    - do_fetch: false
+  roles:
+    - fastir
+
