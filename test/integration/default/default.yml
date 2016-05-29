@@ -1,6 +1,6 @@
 ---
 
-- hosts: test-kitchen
+- hosts: all
   vars:
     - prefix: fqdn
     - dst_mount: "/tmp/cases"
