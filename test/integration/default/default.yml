@@ -7,5 +7,5 @@
     - dst_path: "{{ dst_mount }}/{{ prefix }}-incidentreport"
     - do_fetch: false
   roles:
-    - fastir
+    - juju4.fastir
 

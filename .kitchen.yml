@@ -1,6 +1,10 @@
 ---
 driver:
   name: vagrant
+  provider: <%= ENV['KITCHEN_PROVIDER'] || 'virtualbox' %>
+
+transport:
+  name: sftp
 
 provisioner:
   name: ansible_playbook
