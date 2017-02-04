@@ -1,3 +1,6 @@
+[![Build Status - Master](https://travis-ci.org/juju4/ansible-fastir.svg?branch=master)](https://travis-ci.org/juju4/ansible-fastir)
+[![Build Status - Devel](https://travis-ci.org/juju4/ansible-fastir.svg?branch=devel)](https://travis-ci.org/juju4/ansible-fastir/branches)
+
 # FastIR ansible role
 
 A simple ansible role to execute Sekoia FastIR
@@ -10,6 +13,7 @@ https://github.com/SekoiaLab/Fastir_Collector
 It was tested on the following versions:
  * 1.9
  * 2.0 (required for Windows)
+ * 2.2
 
 ### Operating systems
 
