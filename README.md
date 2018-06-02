@@ -1,6 +1,9 @@
 [![Build Status - Master](https://travis-ci.org/juju4/ansible-fastir.svg?branch=master)](https://travis-ci.org/juju4/ansible-fastir)
 [![Build Status - Devel](https://travis-ci.org/juju4/ansible-fastir.svg?branch=devel)](https://travis-ci.org/juju4/ansible-fastir/branches)
 
+[![Appveyor - Master](https://ci.appveyor.com/api/projects/status/wre8gudf7dmo6dw4?svg=true)](https://ci.appveyor.com/project/juju4/ansible-harden-windows)
+![Appveyor - Devel](https://ci.appveyor.com/api/projects/status/wre8gudf7dmo6dw4/branch/devel?svg=true)
+
 # FastIR ansible role
 
 A simple ansible role to execute Sekoia FastIR
