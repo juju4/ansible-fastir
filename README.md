@@ -14,6 +14,7 @@ It was tested on the following versions:
  * 1.9
  * 2.0 (required for Windows)
  * 2.2
+ * 2.5
 
 ### Operating systems
 
@@ -28,7 +29,7 @@ For example
 ```
 - host: myhost
   roles:
-    - fastir
+    - juju4.fastir
 ```
 
 you probably want to review variables
