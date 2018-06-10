@@ -26,10 +26,12 @@
 #  when: not fastirexe.stat.exists and (do_download is defined and do_download)
 
 - debug: var="{{ dst_path_win }}\\{{ prefix }}-fastir"
+  ignore_errors: true
 - name: check if existing output report
   win_stat:
     path: "{{ dst_path_win }}\\{{ prefix }}-fastir"
   register: fastirout
+  ignore_errors: true
 
 - set_fact:
     fastir_output: "{{ dst_path_win }}\\{{ prefix }}-fastir"
