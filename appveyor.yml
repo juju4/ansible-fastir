@@ -22,7 +22,7 @@ environment:
     CYG_SETUP: C:\cygwin64\setup-x86_64.exe
     CYG_CACHE: C:\cygwin64\var\cache\setup
     CYG_BASH: C:\cygwin64\bin\sh
-    ANSIBLE_VERSION: 2.4.4.0
+    ANSIBLE_VERSION: 2.6.0rc2
     ANSIBLE_EXTRA_VARS:
     SUITE: default
   - TARGET: cygwin64
@@ -30,7 +30,7 @@ environment:
     CYG_SETUP: C:\cygwin64\setup-x86_64.exe
     CYG_CACHE: C:\cygwin64\var\cache\setup
     CYG_BASH: C:\cygwin64\bin\sh
-    ANSIBLE_VERSION: 2.5.3
+    ANSIBLE_VERSION: 2.5.4
     ANSIBLE_EXTRA_VARS:
     SUITE: default
 matrix:
