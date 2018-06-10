@@ -11,19 +11,19 @@
   register: fastirexe
   ignore_errors: true
 - debug: var=fastirexe
-  when: fastirexe.rc == 0
+#  when: fastirexe.rc == 0
 
 ## FIXME! download happens even if already present
 - name: FastIR download
   win_get_url:
     url: https://github.com/SekoiaLab/Fastir_Collector/archive/master.zip
     dest: "{{ bin_path_win }}\\fastir-master.zip"
-  when: not fastirexe.stat.exists and (do_download is defined and do_download)
+#  when: not fastirexe.stat.exists and (do_download is defined and do_download)
 - name: FastIR unzip
   win_unzip:
       src: "{{ bin_path_win }}\\fastir-master.zip"
       dest: "{{ bin_path_win }}"
-  when: not fastirexe.stat.exists and (do_download is defined and do_download)
+#  when: not fastirexe.stat.exists and (do_download is defined and do_download)
 
 - debug: var="{{ dst_path_win }}\\{{ prefix }}-fastir"
 - name: check if existing output report
