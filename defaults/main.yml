@@ -22,4 +22,4 @@ fastir: true
 fastir_args: "--packages all --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
 #fastir_args: "--packages all --profile {{ bin_path_win }}\\Fastir_Collector-master\\FastIR.conf.sample --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
 #fastir_args: "--packages all --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir --dump ram"
-
+fastir_output: "{{ dst_path_win }}\\{{ prefix }}-fastir"
