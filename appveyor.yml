@@ -99,7 +99,7 @@ on_failure:
 on_finish:
 - ps: Get-ChildItem -Recurse -Path "c:\temp\ir-bin"
 - ps: Get-ChildItem -Recurse -Path "c:\temp\*-fastir"
-- ps: dir c:\temp\*-fastir | ForEach {Get-Content $_}
+- ps: dir c:\temp\fqdn-fastir\*\FastIR.log | ForEach {Get-Content $_}
 
 notifications:
 - provider: Email
