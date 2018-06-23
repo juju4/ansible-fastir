@@ -1,5 +1,3 @@
-[![Build Status - Master](https://travis-ci.org/juju4/ansible-fastir.svg?branch=master)](https://travis-ci.org/juju4/ansible-fastir)
-[![Build Status - Devel](https://travis-ci.org/juju4/ansible-fastir.svg?branch=devel)](https://travis-ci.org/juju4/ansible-fastir/branches)
 
 [![Appveyor - Master](https://ci.appveyor.com/api/projects/status/wre8gudf7dmo6dw4?svg=true)](https://ci.appveyor.com/project/juju4/ansible-harden-windows)
 ![Appveyor - Devel](https://ci.appveyor.com/api/projects/status/wre8gudf7dmo6dw4/branch/devel?svg=true)
@@ -10,11 +8,12 @@ A simple ansible role to execute Sekoia FastIR
 http://www.sekoia.fr/blog/fastir-collector-on-advanced-threats/
 https://github.com/SekoiaLab/Fastir_Collector
 
+It targets Windows hosts.
+
 ## Requirements & Dependencies
 
 ### Ansible
 It was tested on the following versions:
- * 1.9
  * 2.0 (required for Windows)
  * 2.2
  * 2.5
