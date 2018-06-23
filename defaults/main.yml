@@ -19,7 +19,8 @@ bin_path_win: "c:\\temp\\ir-bin"
 dst_path_win: "c:\\temp"
 
 fastir: true
-fastir_args: "--packages registry,evt,fs,health,filecatcher,dump --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
+fastir_args: "--packages fs,health --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
+#fastir_args: "--packages registry,evt,fs,health,filecatcher,dump --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
 #fastir_args: "--packages all --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
 #fastir_args: "--packages all --profile {{ bin_path_win }}\\Fastir_Collector-master\\FastIR.conf.sample --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir"
 #fastir_args: "--packages all --output_dir {{ dst_path_win }}\\{{ prefix }}-fastir --dump ram"
