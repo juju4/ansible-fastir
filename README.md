@@ -1,14 +1,17 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+# DEPRECATED/LOOKING FOR MAINTAINERS -> archived
 
 [![Appveyor - Master](https://ci.appveyor.com/api/projects/status/wre8gudf7dmo6dw4?svg=true)](https://ci.appveyor.com/project/juju4/ansible-harden-windows)
 ![Appveyor - Devel](https://ci.appveyor.com/api/projects/status/wre8gudf7dmo6dw4/branch/devel?svg=true)
 
 # FastIR ansible role
 
-A simple ansible role to execute Sekoia FastIR
-http://www.sekoia.fr/blog/fastir-collector-on-advanced-threats/
-https://github.com/SekoiaLab/Fastir_Collector
+A simple ansible role to execute Sekoia FastIR on Windows hosts
+* http://www.sekoia.fr/blog/fastir-collector-on-advanced-threats/
+* https://github.com/SekoiaLab/Fastir_Collector
 
-It targets Windows hosts.
+In Jan 2021, FastIR Collector has been deprecated and replaced by FastIR Artifactors
+* https://github.com/SekoiaLab/fastir_artifacts
 
 ## Requirements & Dependencies
 
